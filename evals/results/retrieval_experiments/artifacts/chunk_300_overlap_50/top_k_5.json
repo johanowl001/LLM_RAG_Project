@@ -1,0 +1,1326 @@
+{
+  "run": {
+    "created_at": "2026-09-30T02:43:38.169719+00:00",
+    "questions_path": "/Users/zhaohan/Documents/Python/LLM_Project/evals/questions.json",
+    "chunks_dir": "/Users/zhaohan/Documents/Python/LLM_Project/evals/results/retrieval_experiments/artifacts/chunk_300_overlap_50/chunks",
+    "index_dir": "/Users/zhaohan/Documents/Python/LLM_Project/evals/results/retrieval_experiments/artifacts/chunk_300_overlap_50/vector_index",
+    "chunk_size": 300,
+    "overlap": 50,
+    "top_k": 5,
+    "embedding": {
+      "model_name": "BAAI/bge-small-en-v1.5",
+      "metric": "cosine_similarity",
+      "normalized_embeddings": true,
+      "chunk_count": 9085,
+      "embedding_dimension": 384,
+      "query_prefix": "Represent this sentence for searching relevant passages: ",
+      "source_chunks": "/Users/zhaohan/Documents/Python/LLM_Project/evals/results/retrieval_experiments/artifacts/chunk_300_overlap_50/chunks/chunks.jsonl"
+    },
+    "generator": "none"
+  },
+  "summary": {
+    "chunk_size": 300,
+    "overlap": 50,
+    "top_k": 5,
+    "question_count": 12,
+    "multi_document_question_count": 3,
+    "document_hit_at_k_rate": 0.6666666666666666,
+    "all_expected_documents_present_rate": 0.6666666666666666,
+    "multi_document_all_expected_documents_present_rate": 0.6666666666666666,
+    "mean_expected_document_recall_at_k": 0.6666666666666666,
+    "mean_retrieval_latency_seconds": 0.010848801820732964,
+    "chunk_count": 9085,
+    "index_size_bytes": 13954605,
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "encoding": "cl100k_base"
+  },
+  "results": [
+    {
+      "id": "q01",
+      "question": "What was AWS sales growth in the second quarter of 2025?",
+      "expected_documents": [
+        "AMZN-Q2-2025-Earnings-Release"
+      ],
+      "retrieval": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "AMZN-Q2-2025-Earnings-Release"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "AMZN-Q2-2025-Earnings-Release",
+          "10Q_Q2_21",
+          "Amazon-2023-Annual-Report",
+          "10Q_Q2_22",
+          "AMZN-Q2-2026-Earnings-Release"
+        ],
+        "first_expected_document_rank": 1,
+        "latency_seconds": 0.011333625006955117
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.8072188496589661,
+          "chunk_id": "AMZN-Q2-2025-Earnings-Release_0000",
+          "document_id": "AMZN-Q2-2025-Earnings-Release",
+          "source_filename": "AMZN-Q2-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2025-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8065415620803833,
+          "chunk_id": "10Q_Q2_21_0068",
+          "document_id": "10Q_Q2_21",
+          "source_filename": "10Q_Q2_21.pdf",
+          "text_file": "10Q_Q2_21.txt",
+          "chunk_index": 68,
+          "token_count": 300,
+          "token_start": 17000,
+          "token_end": 17300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2021,
+          "quarter": "Q2",
+          "document_type": "10-Q"
+        },
+        {
+          "score": 0.8051047921180725,
+          "chunk_id": "Amazon-2023-Annual-Report_0123",
+          "document_id": "Amazon-2023-Annual-Report",
+          "source_filename": "Amazon-2023-Annual-Report.pdf",
+          "text_file": "Amazon-2023-Annual-Report.txt",
+          "chunk_index": 123,
+          "token_count": 300,
+          "token_start": 30750,
+          "token_end": 31050,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "score": 0.8027797937393188,
+          "chunk_id": "10Q_Q2_22_0077",
+          "document_id": "10Q_Q2_22",
+          "source_filename": "10Q_Q2_22.pdf",
+          "text_file": "10Q_Q2_22.txt",
+          "chunk_index": 77,
+          "token_count": 300,
+          "token_start": 19250,
+          "token_end": 19550,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": "Q2",
+          "document_type": "10-Q"
+        },
+        {
+          "score": 0.8019595146179199,
+          "chunk_id": "AMZN-Q2-2026-Earnings-Release_0000",
+          "document_id": "AMZN-Q2-2026-Earnings-Release",
+          "source_filename": "AMZN-Q2-2026-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2026-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2026,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "What were Amazon's net sales and operating income in the first quarter of 2024?",
+      "expected_documents": [
+        "AMZN-Q1-2024-Earnings-Release"
+      ],
+      "retrieval": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "AMZN-Q1-2024-Earnings-Release"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "AMZN-Q1-2024-Earnings-Release",
+          "AMZN-Q4-2025-Earnings-Release",
+          "AMZN-Q1-2025-Earnings-Release",
+          "AMZN-Q4-2023-Earnings-Release",
+          "AMZN-Q4-2024-Earnings-Release"
+        ],
+        "first_expected_document_rank": 1,
+        "latency_seconds": 0.011017665965482593
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.7998557090759277,
+          "chunk_id": "AMZN-Q1-2024-Earnings-Release_0000",
+          "document_id": "AMZN-Q1-2024-Earnings-Release",
+          "source_filename": "AMZN-Q1-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q1-2024-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q1",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7879210710525513,
+          "chunk_id": "AMZN-Q4-2025-Earnings-Release_0000",
+          "document_id": "AMZN-Q4-2025-Earnings-Release",
+          "source_filename": "AMZN-Q4-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2025-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7878199815750122,
+          "chunk_id": "AMZN-Q1-2025-Earnings-Release_0000",
+          "document_id": "AMZN-Q1-2025-Earnings-Release",
+          "source_filename": "AMZN-Q1-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q1-2025-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q1",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7876256704330444,
+          "chunk_id": "AMZN-Q4-2023-Earnings-Release_0000",
+          "document_id": "AMZN-Q4-2023-Earnings-Release",
+          "source_filename": "AMZN-Q4-2023-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2023-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7874231338500977,
+          "chunk_id": "AMZN-Q4-2024-Earnings-Release_0000",
+          "document_id": "AMZN-Q4-2024-Earnings-Release",
+          "source_filename": "AMZN-Q4-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2024-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "How much operating cash flow did Amazon report for the trailing twelve months ended December 31, 2024?",
+      "expected_documents": [
+        "Amazon-2024-Annual-Report"
+      ],
+      "retrieval": {
+        "document_hit_at_k": false,
+        "expected_document_recall_at_k": 0.0,
+        "all_expected_documents_present": false,
+        "found_documents": [],
+        "missing_documents": [
+          "Amazon-2024-Annual-Report"
+        ],
+        "retrieved_documents": [
+          "AMZN-Q4-2025-Earnings-Release",
+          "AMZN-Q4-2023-Earnings-Release",
+          "AMZN-Q4-2022-Amazon-Earnings-Release",
+          "AMZN-Q3-2020-Earnings-Release",
+          "10Q_Q1_22"
+        ],
+        "first_expected_document_rank": null,
+        "latency_seconds": 0.011731582984793931
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.8172757029533386,
+          "chunk_id": "AMZN-Q4-2025-Earnings-Release_0003",
+          "document_id": "AMZN-Q4-2025-Earnings-Release",
+          "source_filename": "AMZN-Q4-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2025-Earnings-Release.txt",
+          "chunk_index": 3,
+          "token_count": 300,
+          "token_start": 750,
+          "token_end": 1050,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8136928081512451,
+          "chunk_id": "AMZN-Q4-2023-Earnings-Release_0030",
+          "document_id": "AMZN-Q4-2023-Earnings-Release",
+          "source_filename": "AMZN-Q4-2023-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2023-Earnings-Release.txt",
+          "chunk_index": 30,
+          "token_count": 300,
+          "token_start": 7500,
+          "token_end": 7800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.785943329334259,
+          "chunk_id": "AMZN-Q4-2022-Amazon-Earnings-Release_0004",
+          "document_id": "AMZN-Q4-2022-Amazon-Earnings-Release",
+          "source_filename": "AMZN-Q4-2022-Amazon-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2022-Amazon-Earnings-Release.txt",
+          "chunk_index": 4,
+          "token_count": 300,
+          "token_start": 1000,
+          "token_end": 1300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7830369472503662,
+          "chunk_id": "AMZN-Q3-2020-Earnings-Release_0028",
+          "document_id": "AMZN-Q3-2020-Earnings-Release",
+          "source_filename": "AMZN-Q3-2020-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2020-Earnings-Release.txt",
+          "chunk_index": 28,
+          "token_count": 300,
+          "token_start": 7000,
+          "token_end": 7300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2020,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7800512909889221,
+          "chunk_id": "10Q_Q1_22_0062",
+          "document_id": "10Q_Q1_22",
+          "source_filename": "10Q_Q1_22.pdf",
+          "text_file": "10Q_Q1_22.txt",
+          "chunk_index": 62,
+          "token_count": 300,
+          "token_start": 15500,
+          "token_end": 15800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": "Q1",
+          "document_type": "10-Q"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "How many full-time and part-time employees did Amazon have at the end of 2023?",
+      "expected_documents": [
+        "Amazon-2023-Annual-Report"
+      ],
+      "retrieval": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "Amazon-2023-Annual-Report"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "Amazon-2025-Annual-Report",
+          "Amazon-2023-Annual-Report",
+          "Amazon-2024-Annual-Report",
+          "AMZN-Q2-2021-Earnings-Release",
+          "AMZN-Q2-2024-Earnings-Release"
+        ],
+        "first_expected_document_rank": 2,
+        "latency_seconds": 0.010531915992032737
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.7404980659484863,
+          "chunk_id": "Amazon-2025-Annual-Report_0048",
+          "document_id": "Amazon-2025-Annual-Report",
+          "source_filename": "Amazon-2025-Annual-Report.pdf",
+          "text_file": "Amazon-2025-Annual-Report.txt",
+          "chunk_index": 48,
+          "token_count": 300,
+          "token_start": 12000,
+          "token_end": 12300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "score": 0.7398391366004944,
+          "chunk_id": "Amazon-2023-Annual-Report_0050",
+          "document_id": "Amazon-2023-Annual-Report",
+          "source_filename": "Amazon-2023-Annual-Report.pdf",
+          "text_file": "Amazon-2023-Annual-Report.txt",
+          "chunk_index": 50,
+          "token_count": 300,
+          "token_start": 12500,
+          "token_end": 12800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "score": 0.7362461090087891,
+          "chunk_id": "Amazon-2024-Annual-Report_0047",
+          "document_id": "Amazon-2024-Annual-Report",
+          "source_filename": "Amazon-2024-Annual-Report.pdf",
+          "text_file": "Amazon-2024-Annual-Report.txt",
+          "chunk_index": 47,
+          "token_count": 300,
+          "token_start": 11750,
+          "token_end": 12050,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "score": 0.7325618267059326,
+          "chunk_id": "AMZN-Q2-2021-Earnings-Release_0027",
+          "document_id": "AMZN-Q2-2021-Earnings-Release",
+          "source_filename": "AMZN-Q2-2021-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2021-Earnings-Release.txt",
+          "chunk_index": 27,
+          "token_count": 300,
+          "token_start": 6750,
+          "token_end": 7050,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2021,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7315786480903625,
+          "chunk_id": "AMZN-Q2-2024-Earnings-Release_0009",
+          "document_id": "AMZN-Q2-2024-Earnings-Release",
+          "source_filename": "AMZN-Q2-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2024-Earnings-Release.txt",
+          "chunk_index": 9,
+          "token_count": 300,
+          "token_start": 2250,
+          "token_end": 2550,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "In the 2024 shareholder letter, what does Andy Jassy say are Amazon's two largest businesses?",
+      "expected_documents": [
+        "2024-Shareholder-Letter-Final"
+      ],
+      "retrieval": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "2024-Shareholder-Letter-Final"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "2022-Shareholder-Letter",
+          "Amazon-2022-Annual-Report",
+          "2024-Shareholder-Letter-Final"
+        ],
+        "first_expected_document_rank": 5,
+        "latency_seconds": 0.01035966700874269
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.7359415292739868,
+          "chunk_id": "2022-Shareholder-Letter_0000",
+          "document_id": "2022-Shareholder-Letter",
+          "source_filename": "2022-Shareholder-Letter.pdf",
+          "text_file": "2022-Shareholder-Letter.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": null,
+          "document_type": "shareholder_letter"
+        },
+        {
+          "score": 0.7269667983055115,
+          "chunk_id": "Amazon-2022-Annual-Report_0000",
+          "document_id": "Amazon-2022-Annual-Report",
+          "source_filename": "Amazon-2022-Annual-Report.pdf",
+          "text_file": "Amazon-2022-Annual-Report.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "score": 0.7133020758628845,
+          "chunk_id": "Amazon-2022-Annual-Report_0026",
+          "document_id": "Amazon-2022-Annual-Report",
+          "source_filename": "Amazon-2022-Annual-Report.pdf",
+          "text_file": "Amazon-2022-Annual-Report.txt",
+          "chunk_index": 26,
+          "token_count": 300,
+          "token_start": 6500,
+          "token_end": 6800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "score": 0.7122083902359009,
+          "chunk_id": "2022-Shareholder-Letter_0026",
+          "document_id": "2022-Shareholder-Letter",
+          "source_filename": "2022-Shareholder-Letter.pdf",
+          "text_file": "2022-Shareholder-Letter.txt",
+          "chunk_index": 26,
+          "token_count": 300,
+          "token_start": 6500,
+          "token_end": 6800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": null,
+          "document_type": "shareholder_letter"
+        },
+        {
+          "score": 0.7010179162025452,
+          "chunk_id": "2024-Shareholder-Letter-Final_0000",
+          "document_id": "2024-Shareholder-Letter-Final",
+          "source_filename": "2024-Shareholder-Letter-Final.pdf",
+          "text_file": "2024-Shareholder-Letter-Final.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": null,
+          "document_type": "shareholder_letter"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "Compare AWS net sales in the first quarter of 2024 with the first quarter of 2025.",
+      "expected_documents": [
+        "AMZN-Q1-2024-Earnings-Release",
+        "AMZN-Q1-2025-Earnings-Release"
+      ],
+      "retrieval": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "AMZN-Q1-2024-Earnings-Release",
+          "AMZN-Q1-2025-Earnings-Release"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "10Q_Q1_24",
+          "AMZN-Q1-2025-Earnings-Release",
+          "Amazon-2024-Annual-Report",
+          "AMZN-Q1-2024-Earnings-Release",
+          "AMZN-Q1-2026-Earnings-Release"
+        ],
+        "first_expected_document_rank": 2,
+        "latency_seconds": 0.010632624966092408
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.8102951049804688,
+          "chunk_id": "10Q_Q1_24_0068",
+          "document_id": "10Q_Q1_24",
+          "source_filename": "10Q_Q1_24.pdf",
+          "text_file": "10Q_Q1_24.txt",
+          "chunk_index": 68,
+          "token_count": 300,
+          "token_start": 17000,
+          "token_end": 17300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q1",
+          "document_type": "10-Q"
+        },
+        {
+          "score": 0.8048831224441528,
+          "chunk_id": "AMZN-Q1-2025-Earnings-Release_0000",
+          "document_id": "AMZN-Q1-2025-Earnings-Release",
+          "source_filename": "AMZN-Q1-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q1-2025-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q1",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8033734560012817,
+          "chunk_id": "Amazon-2024-Annual-Report_0120",
+          "document_id": "Amazon-2024-Annual-Report",
+          "source_filename": "Amazon-2024-Annual-Report.pdf",
+          "text_file": "Amazon-2024-Annual-Report.txt",
+          "chunk_index": 120,
+          "token_count": 300,
+          "token_start": 30000,
+          "token_end": 30300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "score": 0.8006467819213867,
+          "chunk_id": "AMZN-Q1-2024-Earnings-Release_0000",
+          "document_id": "AMZN-Q1-2024-Earnings-Release",
+          "source_filename": "AMZN-Q1-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q1-2024-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q1",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8001343011856079,
+          "chunk_id": "AMZN-Q1-2026-Earnings-Release_0000",
+          "document_id": "AMZN-Q1-2026-Earnings-Release",
+          "source_filename": "AMZN-Q1-2026-Earnings-Release.pdf",
+          "text_file": "AMZN-Q1-2026-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2026,
+          "quarter": "Q1",
+          "document_type": "earnings_release"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "Compare Amazon's operating income in the second quarter of 2023 and the second quarter of 2024.",
+      "expected_documents": [
+        "AMZN-Q2-2023-Amazon-Earnings-Release",
+        "AMZN-Q2-2024-Earnings-Release"
+      ],
+      "retrieval": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "AMZN-Q2-2023-Amazon-Earnings-Release",
+          "AMZN-Q2-2024-Earnings-Release"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "AMZN-Q2-2023-Amazon-Earnings-Release",
+          "10Q_Q1_23",
+          "AMZN-Q2-2024-Earnings-Release",
+          "AMZN-Q1-2024-Earnings-Release",
+          "2024-Shareholder-Letter-Final"
+        ],
+        "first_expected_document_rank": 1,
+        "latency_seconds": 0.010794916015584022
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.8229361772537231,
+          "chunk_id": "AMZN-Q2-2023-Amazon-Earnings-Release_0000",
+          "document_id": "AMZN-Q2-2023-Amazon-Earnings-Release",
+          "source_filename": "AMZN-Q2-2023-Amazon-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2023-Amazon-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8221491575241089,
+          "chunk_id": "10Q_Q1_23_0090",
+          "document_id": "10Q_Q1_23",
+          "source_filename": "10Q_Q1_23.pdf",
+          "text_file": "10Q_Q1_23.txt",
+          "chunk_index": 90,
+          "token_count": 300,
+          "token_start": 22500,
+          "token_end": 22800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q1",
+          "document_type": "10-Q"
+        },
+        {
+          "score": 0.8171885013580322,
+          "chunk_id": "AMZN-Q2-2024-Earnings-Release_0000",
+          "document_id": "AMZN-Q2-2024-Earnings-Release",
+          "source_filename": "AMZN-Q2-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2024-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8125925660133362,
+          "chunk_id": "AMZN-Q1-2024-Earnings-Release_0025",
+          "document_id": "AMZN-Q1-2024-Earnings-Release",
+          "source_filename": "AMZN-Q1-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q1-2024-Earnings-Release.txt",
+          "chunk_index": 25,
+          "token_count": 300,
+          "token_start": 6250,
+          "token_end": 6550,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q1",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8118051886558533,
+          "chunk_id": "2024-Shareholder-Letter-Final_0000",
+          "document_id": "2024-Shareholder-Letter-Final",
+          "source_filename": "2024-Shareholder-Letter-Final.pdf",
+          "text_file": "2024-Shareholder-Letter-Final.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": null,
+          "document_type": "shareholder_letter"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "What net sales did Amazon report for the third quarter of 2022, and how did they change year over year?",
+      "expected_documents": [
+        "AMZN-Q3-2022-Amazon-Earnings-Release"
+      ],
+      "retrieval": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "AMZN-Q3-2022-Amazon-Earnings-Release"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "AMZN-Q3-2022-Amazon-Earnings-Release",
+          "AMZN-Q3-2023-Earnings-Release",
+          "AMZN-Q3-2025-Earnings-Release",
+          "AMZN-Q3-2024-Earnings-Release",
+          "AMZN-Q2-2025-Earnings-Release"
+        ],
+        "first_expected_document_rank": 1,
+        "latency_seconds": 0.010504707985091954
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.8122173547744751,
+          "chunk_id": "AMZN-Q3-2022-Amazon-Earnings-Release_0000",
+          "document_id": "AMZN-Q3-2022-Amazon-Earnings-Release",
+          "source_filename": "AMZN-Q3-2022-Amazon-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2022-Amazon-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.807927131652832,
+          "chunk_id": "AMZN-Q3-2023-Earnings-Release_0000",
+          "document_id": "AMZN-Q3-2023-Earnings-Release",
+          "source_filename": "AMZN-Q3-2023-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2023-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8050879836082458,
+          "chunk_id": "AMZN-Q3-2025-Earnings-Release_0000",
+          "document_id": "AMZN-Q3-2025-Earnings-Release",
+          "source_filename": "AMZN-Q3-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2025-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.8028978109359741,
+          "chunk_id": "AMZN-Q3-2024-Earnings-Release_0000",
+          "document_id": "AMZN-Q3-2024-Earnings-Release",
+          "source_filename": "AMZN-Q3-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2024-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7846786975860596,
+          "chunk_id": "AMZN-Q2-2025-Earnings-Release_0007",
+          "document_id": "AMZN-Q2-2025-Earnings-Release",
+          "source_filename": "AMZN-Q2-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2025-Earnings-Release.txt",
+          "chunk_index": 7,
+          "token_count": 300,
+          "token_start": 1750,
+          "token_end": 2050,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "What did Amazon report for purchases of property and equipment in 2025?",
+      "expected_documents": [
+        "Amazon-2025-Annual-Report"
+      ],
+      "retrieval": {
+        "document_hit_at_k": false,
+        "expected_document_recall_at_k": 0.0,
+        "all_expected_documents_present": false,
+        "found_documents": [],
+        "missing_documents": [
+          "Amazon-2025-Annual-Report"
+        ],
+        "retrieved_documents": [
+          "business_and_financial_update",
+          "AMZN-Q3-2021-Earnings-Release",
+          "AMZN-Q2-2021-Earnings-Release",
+          "AMZN-Q3-2020-Earnings-Release",
+          "AMZN-Q4-2022-Amazon-Earnings-Release"
+        ],
+        "first_expected_document_rank": null,
+        "latency_seconds": 0.010031708981841803
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.7936830520629883,
+          "chunk_id": "business_and_financial_update_0038",
+          "document_id": "business_and_financial_update",
+          "source_filename": "business_and_financial_update.pdf",
+          "text_file": "business_and_financial_update.txt",
+          "chunk_index": 38,
+          "token_count": 300,
+          "token_start": 9500,
+          "token_end": 9800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2021,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7875036001205444,
+          "chunk_id": "AMZN-Q3-2021-Earnings-Release_0036",
+          "document_id": "AMZN-Q3-2021-Earnings-Release",
+          "source_filename": "AMZN-Q3-2021-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2021-Earnings-Release.txt",
+          "chunk_index": 36,
+          "token_count": 300,
+          "token_start": 9000,
+          "token_end": 9300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2021,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7793258428573608,
+          "chunk_id": "AMZN-Q2-2021-Earnings-Release_0033",
+          "document_id": "AMZN-Q2-2021-Earnings-Release",
+          "source_filename": "AMZN-Q2-2021-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2021-Earnings-Release.txt",
+          "chunk_index": 33,
+          "token_count": 300,
+          "token_start": 8250,
+          "token_end": 8550,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2021,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7710275650024414,
+          "chunk_id": "AMZN-Q3-2020-Earnings-Release_0034",
+          "document_id": "AMZN-Q3-2020-Earnings-Release",
+          "source_filename": "AMZN-Q3-2020-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2020-Earnings-Release.txt",
+          "chunk_index": 34,
+          "token_count": 300,
+          "token_start": 8500,
+          "token_end": 8800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2020,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7631452083587646,
+          "chunk_id": "AMZN-Q4-2022-Amazon-Earnings-Release_0026",
+          "document_id": "AMZN-Q4-2022-Amazon-Earnings-Release",
+          "source_filename": "AMZN-Q4-2022-Amazon-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2022-Amazon-Earnings-Release.txt",
+          "chunk_index": 26,
+          "token_count": 300,
+          "token_start": 6500,
+          "token_end": 6800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "What were advertising services sales in the fourth quarter of 2024?",
+      "expected_documents": [
+        "AMZN-Q4-2024-Earnings-Release"
+      ],
+      "retrieval": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "AMZN-Q4-2024-Earnings-Release"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "AMZN-Q4-2025-Earnings-Release",
+          "AMZN-Q2-2024-Earnings-Release",
+          "10Q_Q1_24",
+          "AMZN-Q3-2025-Earnings-Release",
+          "AMZN-Q4-2024-Earnings-Release"
+        ],
+        "first_expected_document_rank": 5,
+        "latency_seconds": 0.01192079100292176
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.6925879716873169,
+          "chunk_id": "AMZN-Q4-2025-Earnings-Release_0000",
+          "document_id": "AMZN-Q4-2025-Earnings-Release",
+          "source_filename": "AMZN-Q4-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2025-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.6917388439178467,
+          "chunk_id": "AMZN-Q2-2024-Earnings-Release_0016",
+          "document_id": "AMZN-Q2-2024-Earnings-Release",
+          "source_filename": "AMZN-Q2-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2024-Earnings-Release.txt",
+          "chunk_index": 16,
+          "token_count": 300,
+          "token_start": 4000,
+          "token_end": 4300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.6914631128311157,
+          "chunk_id": "10Q_Q1_24_0053",
+          "document_id": "10Q_Q1_24",
+          "source_filename": "10Q_Q1_24.pdf",
+          "text_file": "10Q_Q1_24.txt",
+          "chunk_index": 53,
+          "token_count": 300,
+          "token_start": 13250,
+          "token_end": 13550,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q1",
+          "document_type": "10-Q"
+        },
+        {
+          "score": 0.6890586614608765,
+          "chunk_id": "AMZN-Q3-2025-Earnings-Release_0010",
+          "document_id": "AMZN-Q3-2025-Earnings-Release",
+          "source_filename": "AMZN-Q3-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2025-Earnings-Release.txt",
+          "chunk_index": 10,
+          "token_count": 300,
+          "token_start": 2500,
+          "token_end": 2800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.688603401184082,
+          "chunk_id": "AMZN-Q4-2024-Earnings-Release_0000",
+          "document_id": "AMZN-Q4-2024-Earnings-Release",
+          "source_filename": "AMZN-Q4-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2024-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "How did Amazon's net sales change from 2023 to 2024?",
+      "expected_documents": [
+        "Amazon-2023-Annual-Report",
+        "Amazon-2024-Annual-Report"
+      ],
+      "retrieval": {
+        "document_hit_at_k": false,
+        "expected_document_recall_at_k": 0.0,
+        "all_expected_documents_present": false,
+        "found_documents": [],
+        "missing_documents": [
+          "Amazon-2023-Annual-Report",
+          "Amazon-2024-Annual-Report"
+        ],
+        "retrieved_documents": [
+          "AMZN-Q4-2022-Amazon-Earnings-Release",
+          "AMZN-Q4-2023-Earnings-Release",
+          "10Q_Q3_22",
+          "10Q_Q2_24",
+          "AMZN-Q4-2024-Earnings-Release"
+        ],
+        "first_expected_document_rank": null,
+        "latency_seconds": 0.010962540982291102
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.7977690696716309,
+          "chunk_id": "AMZN-Q4-2022-Amazon-Earnings-Release_0000",
+          "document_id": "AMZN-Q4-2022-Amazon-Earnings-Release",
+          "source_filename": "AMZN-Q4-2022-Amazon-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2022-Amazon-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7942920327186584,
+          "chunk_id": "AMZN-Q4-2023-Earnings-Release_0000",
+          "document_id": "AMZN-Q4-2023-Earnings-Release",
+          "source_filename": "AMZN-Q4-2023-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2023-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7902178764343262,
+          "chunk_id": "10Q_Q3_22_0078",
+          "document_id": "10Q_Q3_22",
+          "source_filename": "10Q_Q3_22.pdf",
+          "text_file": "10Q_Q3_22.txt",
+          "chunk_index": 78,
+          "token_count": 300,
+          "token_start": 19500,
+          "token_end": 19800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2022,
+          "quarter": "Q3",
+          "document_type": "10-Q"
+        },
+        {
+          "score": 0.7893925905227661,
+          "chunk_id": "10Q_Q2_24_0076",
+          "document_id": "10Q_Q2_24",
+          "source_filename": "10Q_Q2_24.pdf",
+          "text_file": "10Q_Q2_24.txt",
+          "chunk_index": 76,
+          "token_count": 300,
+          "token_start": 19000,
+          "token_end": 19300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q2",
+          "document_type": "10-Q"
+        },
+        {
+          "score": 0.7882921099662781,
+          "chunk_id": "AMZN-Q4-2024-Earnings-Release_0000",
+          "document_id": "AMZN-Q4-2024-Earnings-Release",
+          "source_filename": "AMZN-Q4-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q4-2024-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 300,
+          "token_start": 0,
+          "token_end": 300,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q4",
+          "document_type": "earnings_release"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "According to the 2025 shareholder letter, how is Amazon approaching generative AI and custom chips?",
+      "expected_documents": [
+        "2025-Shareholder-Letter-Final"
+      ],
+      "retrieval": {
+        "document_hit_at_k": false,
+        "expected_document_recall_at_k": 0.0,
+        "all_expected_documents_present": false,
+        "found_documents": [],
+        "missing_documents": [
+          "2025-Shareholder-Letter-Final"
+        ],
+        "retrieved_documents": [
+          "Amazon-2023-Annual-Report",
+          "AMZN-Q3-2023-Earnings-Release",
+          "AMZN-Q1-2026-Earnings-Release",
+          "AMZN-Q2-2023-Amazon-Earnings-Release"
+        ],
+        "first_expected_document_rank": null,
+        "latency_seconds": 0.010363874956965446
+      },
+      "retrieved_chunks": [
+        {
+          "score": 0.7767617106437683,
+          "chunk_id": "Amazon-2023-Annual-Report_0029",
+          "document_id": "Amazon-2023-Annual-Report",
+          "source_filename": "Amazon-2023-Annual-Report.pdf",
+          "text_file": "Amazon-2023-Annual-Report.txt",
+          "chunk_index": 29,
+          "token_count": 300,
+          "token_start": 7250,
+          "token_end": 7550,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "score": 0.7674123048782349,
+          "chunk_id": "AMZN-Q3-2023-Earnings-Release_0011",
+          "document_id": "AMZN-Q3-2023-Earnings-Release",
+          "source_filename": "AMZN-Q3-2023-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2023-Earnings-Release.txt",
+          "chunk_index": 11,
+          "token_count": 300,
+          "token_start": 2750,
+          "token_end": 3050,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7618333697319031,
+          "chunk_id": "AMZN-Q1-2026-Earnings-Release_0003",
+          "document_id": "AMZN-Q1-2026-Earnings-Release",
+          "source_filename": "AMZN-Q1-2026-Earnings-Release.pdf",
+          "text_file": "AMZN-Q1-2026-Earnings-Release.txt",
+          "chunk_index": 3,
+          "token_count": 300,
+          "token_start": 750,
+          "token_end": 1050,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2026,
+          "quarter": "Q1",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.7503007650375366,
+          "chunk_id": "AMZN-Q2-2023-Amazon-Earnings-Release_0011",
+          "document_id": "AMZN-Q2-2023-Amazon-Earnings-Release",
+          "source_filename": "AMZN-Q2-2023-Amazon-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2023-Amazon-Earnings-Release.txt",
+          "chunk_index": 11,
+          "token_count": 300,
+          "token_start": 2750,
+          "token_end": 3050,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "score": 0.749677300453186,
+          "chunk_id": "AMZN-Q3-2023-Earnings-Release_0010",
+          "document_id": "AMZN-Q3-2023-Earnings-Release",
+          "source_filename": "AMZN-Q3-2023-Earnings-Release.pdf",
+          "text_file": "AMZN-Q3-2023-Earnings-Release.txt",
+          "chunk_index": 10,
+          "token_count": 300,
+          "token_start": 2500,
+          "token_end": 2800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q3",
+          "document_type": "earnings_release"
+        }
+      ]
+    }
+  ]
+}

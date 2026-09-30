@@ -1,0 +1,47 @@
+{
+  "result_file": "/Users/zhaohan/Documents/Python/LLM_Project/evals/results/full_rag/ollama_qwen2.5-3b_20260930_124757.json",
+  "retrieval_metrics": {
+    "question_count": 12,
+    "document_hit_at_k_rate": 0.75,
+    "mean_expected_document_recall_at_k": 0.75,
+    "all_expected_documents_present_rate": 0.75,
+    "mean_latency_seconds": 0.7045784200842414
+  },
+  "generation_metrics": {
+    "requested_count": 12,
+    "completed_count": 12,
+    "failed_ids": [],
+    "mean_latency_seconds": 2.5880630591709632,
+    "total_input_tokens": 37859,
+    "total_output_tokens": 469
+  },
+  "answer_quality_metrics": {
+    "correctness": {
+      "mean_score_0_to_1": 0.20307373927661831,
+      "scored_count": 12
+    },
+    "groundedness": {
+      "mean_score_0_to_1": 0.0,
+      "scored_count": 12
+    },
+    "citation_source_support": {
+      "mean_score_0_to_1": 0.0,
+      "scored_count": 12
+    },
+    "completeness": {
+      "mean_score_0_to_1": 0.33355564448001424,
+      "scored_count": 12
+    }
+  },
+  "diagnostic_cases": {
+    "retrieval_succeeded_generation_failed": [
+      "q01",
+      "q02",
+      "q04",
+      "q05",
+      "q06"
+    ],
+    "retrieval_failed_generation_succeeded": [],
+    "note": "Answer success requires correctness and groundedness >= 0.75; unscored answers are conservatively not classified as successful."
+  }
+}

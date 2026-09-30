@@ -1,0 +1,31 @@
+{
+  "question_count": 12,
+  "document_hit_at_k_rate": 0.8333333333333334,
+  "all_expected_documents_present_rate": 0.75,
+  "mean_expected_document_recall_at_k": 0.7916666666666666,
+  "mean_retrieval_latency_seconds": 0.04492562858407231,
+  "retrieval_failure_count": 2,
+  "failure_question_ids": [
+    "q03",
+    "q12"
+  ],
+  "dense_baseline_hit_rate": 0.75,
+  "dense_baseline_failure_question_ids": [
+    "q03",
+    "q11",
+    "q12"
+  ],
+  "hit_rate_delta_vs_dense": 0.08333333333333337,
+  "changed_question_ids": [
+    "q11"
+  ],
+  "newly_hit_question_ids": [
+    "q11"
+  ],
+  "newly_missed_question_ids": [],
+  "focus_questions": {
+    "q03": false,
+    "q11": true,
+    "q12": false
+  }
+}

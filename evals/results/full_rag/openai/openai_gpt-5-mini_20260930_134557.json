@@ -1,0 +1,292 @@
+{
+  "run": {
+    "created_at": "2026-09-30T04:16:10.321205+00:00",
+    "questions_path": "/Users/zhaohan/Documents/Python/LLM_Project/evals/questions.json",
+    "index_dir": "/Users/zhaohan/Documents/Python/LLM_Project/evals/results/retrieval_experiments/artifacts/chunk_800_overlap_100/vector_index",
+    "retrieval_configuration": {
+      "chunk_size": 800,
+      "overlap": 100,
+      "top_k": 8
+    },
+    "generation_context": {
+      "source_count": 8,
+      "max_chars_per_chunk": 1200,
+      "reason": "preserve all top-k sources within the local model context window"
+    },
+    "embedding": {
+      "model_name": "BAAI/bge-small-en-v1.5",
+      "metric": "cosine_similarity",
+      "normalized_embeddings": true,
+      "chunk_count": 3267,
+      "embedding_dimension": 384,
+      "query_prefix": "Represent this sentence for searching relevant passages: ",
+      "source_chunks": "/Users/zhaohan/Documents/Python/LLM_Project/evals/results/retrieval_experiments/artifacts/chunk_800_overlap_100/chunks/chunks.jsonl"
+    },
+    "generator": "openai",
+    "generation_model": "gpt-5-mini",
+    "judge": "none",
+    "judge_model": null
+  },
+  "summary": {
+    "retrieval_metrics": {
+      "question_count": 1,
+      "document_hit_at_k_rate": 1,
+      "mean_expected_document_recall_at_k": 1.0,
+      "all_expected_documents_present_rate": 1,
+      "mean_latency_seconds": 0.7155149999889545
+    },
+    "generation_metrics": {
+      "requested_count": 1,
+      "completed_count": 1,
+      "failed_ids": [],
+      "mean_latency_seconds": 5.028107625024859,
+      "total_input_tokens": 2712,
+      "total_output_tokens": 259
+    },
+    "answer_quality_metrics": {
+      "correctness": {
+        "mean_score_0_to_1": 0.5714285714285714,
+        "scored_count": 1
+      },
+      "groundedness": {
+        "mean_score_0_to_1": 1.0,
+        "scored_count": 1
+      },
+      "citation_source_support": {
+        "mean_score_0_to_1": 1.0,
+        "scored_count": 1
+      },
+      "completeness": {
+        "mean_score_0_to_1": 0.5714285714285714,
+        "scored_count": 1
+      }
+    },
+    "diagnostic_cases": {
+      "retrieval_succeeded_generation_failed": [
+        "q01"
+      ],
+      "retrieval_failed_generation_succeeded": [],
+      "note": "Answer success requires correctness and groundedness >= 0.75; unscored answers are conservatively not classified as successful."
+    }
+  },
+  "results": [
+    {
+      "id": "q01",
+      "question": "What was AWS sales growth in the second quarter of 2025?",
+      "expected_documents": [
+        "AMZN-Q2-2025-Earnings-Release"
+      ],
+      "answer_notes": "Report the year-over-year AWS sales growth for Q2 2025.",
+      "reference_answer": "AWS segment sales increased 17.5% year over year to $30.9 billion in Q2 2025.",
+      "retrieved_sources": [
+        {
+          "source_id": "S1",
+          "source_label": "S1: AMZN-Q2-2026-Earnings-Release, 2026 Q2, chunk 0",
+          "score": 0.8014388680458069,
+          "chunk_id": "AMZN-Q2-2026-Earnings-Release_0000",
+          "document_id": "AMZN-Q2-2026-Earnings-Release",
+          "source_filename": "AMZN-Q2-2026-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2026-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 800,
+          "token_start": 0,
+          "token_end": 800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2026,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "source_id": "S2",
+          "source_label": "S2: AMZN-Q2-2025-Earnings-Release, 2025 Q2, chunk 0",
+          "score": 0.800093412399292,
+          "chunk_id": "AMZN-Q2-2025-Earnings-Release_0000",
+          "document_id": "AMZN-Q2-2025-Earnings-Release",
+          "source_filename": "AMZN-Q2-2025-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2025-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 800,
+          "token_start": 0,
+          "token_end": 800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "source_id": "S3",
+          "source_label": "S3: Amazon-2025-Annual-Report, 2025, chunk 44",
+          "score": 0.7979716062545776,
+          "chunk_id": "Amazon-2025-Annual-Report_0044",
+          "document_id": "Amazon-2025-Annual-Report",
+          "source_filename": "Amazon-2025-Annual-Report.pdf",
+          "text_file": "Amazon-2025-Annual-Report.txt",
+          "chunk_index": 44,
+          "token_count": 800,
+          "token_start": 30800,
+          "token_end": 31600,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2025,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "source_id": "S4",
+          "source_label": "S4: AMZN-Q2-2023-Amazon-Earnings-Release, 2023 Q2, chunk 0",
+          "score": 0.7936828136444092,
+          "chunk_id": "AMZN-Q2-2023-Amazon-Earnings-Release_0000",
+          "document_id": "AMZN-Q2-2023-Amazon-Earnings-Release",
+          "source_filename": "AMZN-Q2-2023-Amazon-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2023-Amazon-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 800,
+          "token_start": 0,
+          "token_end": 800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "source_id": "S5",
+          "source_label": "S5: AMZN-Q2-2024-Earnings-Release, 2024 Q2, chunk 0",
+          "score": 0.7896625995635986,
+          "chunk_id": "AMZN-Q2-2024-Earnings-Release_0000",
+          "document_id": "AMZN-Q2-2024-Earnings-Release",
+          "source_filename": "AMZN-Q2-2024-Earnings-Release.pdf",
+          "text_file": "AMZN-Q2-2024-Earnings-Release.txt",
+          "chunk_index": 0,
+          "token_count": 800,
+          "token_start": 0,
+          "token_end": 800,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2024,
+          "quarter": "Q2",
+          "document_type": "earnings_release"
+        },
+        {
+          "source_id": "S6",
+          "source_label": "S6: 10Q_Q2_23, 2023 Q2, chunk 28",
+          "score": 0.7850777506828308,
+          "chunk_id": "10Q_Q2_23_0028",
+          "document_id": "10Q_Q2_23",
+          "source_filename": "10Q_Q2_23.pdf",
+          "text_file": "10Q_Q2_23.txt",
+          "chunk_index": 28,
+          "token_count": 800,
+          "token_start": 19600,
+          "token_end": 20400,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": "Q2",
+          "document_type": "10-Q"
+        },
+        {
+          "source_id": "S7",
+          "source_label": "S7: Amazon-2021-Annual-Report, 2021, chunk 39",
+          "score": 0.7831588387489319,
+          "chunk_id": "Amazon-2021-Annual-Report_0039",
+          "document_id": "Amazon-2021-Annual-Report",
+          "source_filename": "Amazon-2021-Annual-Report.pdf",
+          "text_file": "Amazon-2021-Annual-Report.txt",
+          "chunk_index": 39,
+          "token_count": 800,
+          "token_start": 27300,
+          "token_end": 28100,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2021,
+          "quarter": null,
+          "document_type": "annual_report"
+        },
+        {
+          "source_id": "S8",
+          "source_label": "S8: Amazon-2023-Annual-Report, 2023, chunk 44",
+          "score": 0.7801836729049683,
+          "chunk_id": "Amazon-2023-Annual-Report_0044",
+          "document_id": "Amazon-2023-Annual-Report",
+          "source_filename": "Amazon-2023-Annual-Report.pdf",
+          "text_file": "Amazon-2023-Annual-Report.txt",
+          "chunk_index": 44,
+          "token_count": 800,
+          "token_start": 30800,
+          "token_end": 31600,
+          "company": "Amazon.com, Inc.",
+          "ticker": "AMZN",
+          "year": 2023,
+          "quarter": null,
+          "document_type": "annual_report"
+        }
+      ],
+      "retrieval_metrics": {
+        "document_hit_at_k": true,
+        "expected_document_recall_at_k": 1.0,
+        "all_expected_documents_present": true,
+        "found_documents": [
+          "AMZN-Q2-2025-Earnings-Release"
+        ],
+        "missing_documents": [],
+        "retrieved_documents": [
+          "AMZN-Q2-2026-Earnings-Release",
+          "AMZN-Q2-2025-Earnings-Release",
+          "Amazon-2025-Annual-Report",
+          "AMZN-Q2-2023-Amazon-Earnings-Release",
+          "AMZN-Q2-2024-Earnings-Release",
+          "10Q_Q2_23",
+          "Amazon-2021-Annual-Report",
+          "Amazon-2023-Annual-Report"
+        ],
+        "first_expected_document_rank": 2,
+        "latency_seconds": 0.7155149999889545
+      },
+      "answer": "AWS sales grew 17.5% year-over-year in the second quarter of 2025 [S2].",
+      "generation_metrics": {
+        "status": "completed",
+        "model": "gpt-5-mini",
+        "latency_seconds": 5.028107625024859,
+        "input_tokens": 2712,
+        "output_tokens": 259,
+        "total_tokens": 2971
+      },
+      "answer_evaluation": {
+        "deterministic": {
+          "correctness": {
+            "status": "scored",
+            "score_0_to_1": 0.5714285714285714,
+            "method": "reference_answer_token_f1"
+          },
+          "groundedness": {
+            "status": "heuristic",
+            "score_0_to_1": 1.0,
+            "method": "numeric_claim_valid_citation_coverage",
+            "note": "Citation presence is auditable but does not prove entailment; use --judge for semantic scoring."
+          },
+          "citation_source_support": {
+            "status": "heuristic",
+            "score_0_to_1": 1.0,
+            "method": "valid_source_ids_and_numeric_claim_coverage",
+            "valid_source_ids": [
+              "S2"
+            ],
+            "invalid_source_ids": [],
+            "factual_sentence_count": 1,
+            "cited_factual_sentence_count": 1
+          },
+          "completeness": {
+            "status": "scored",
+            "score_0_to_1": 0.5714285714285714,
+            "method": "reference_answer_token_recall"
+          },
+          "refused_for_insufficient_context": false
+        },
+        "llm_judge": null
+      }
+    }
+  ]
+}

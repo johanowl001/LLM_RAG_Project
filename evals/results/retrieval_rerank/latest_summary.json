@@ -1,0 +1,34 @@
+{
+  "question_count": 12,
+  "document_hit_at_k_rate": 0.6666666666666666,
+  "all_expected_documents_present_rate": 0.6666666666666666,
+  "mean_expected_document_recall_at_k": 0.6666666666666666,
+  "mean_retrieval_latency_seconds": 0.16873406240483746,
+  "retrieval_failure_count": 4,
+  "failure_question_ids": [
+    "q03",
+    "q04",
+    "q11",
+    "q12"
+  ],
+  "dense_baseline_hit_rate": 0.75,
+  "hybrid_baseline_hit_rate": 0.8333333333333334,
+  "dense_baseline_mean_retrieval_latency_seconds": 0.010341243246026957,
+  "hybrid_baseline_mean_retrieval_latency_seconds": 0.04492562858407231,
+  "latency_delta_seconds_vs_dense": 0.1583928191588105,
+  "latency_delta_seconds_vs_hybrid": 0.12380843382076515,
+  "hit_rate_delta_vs_dense": -0.08333333333333337,
+  "hit_rate_delta_vs_hybrid": -0.16666666666666674,
+  "improved_question_ids_vs_hybrid": [],
+  "regression_question_ids_vs_hybrid": [
+    "q04",
+    "q11"
+  ],
+  "preserves_or_improves_hybrid_hit_rate": false,
+  "has_regressions_vs_hybrid": true,
+  "focus_questions": {
+    "q03": false,
+    "q11": false,
+    "q12": false
+  }
+}

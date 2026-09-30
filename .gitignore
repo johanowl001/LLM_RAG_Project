@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+
+# Raw source documents and generated text can be recreated locally.
+data/raw/*
+!data/raw/.gitkeep
+data/*
+!data/processed/.gitkeep

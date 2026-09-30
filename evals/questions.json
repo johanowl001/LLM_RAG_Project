@@ -1,0 +1,95 @@
+[
+  {
+    "id": "q01",
+    "question": "What was AWS sales growth in the second quarter of 2025?",
+    "expected_documents": ["AMZN-Q2-2025-Earnings-Release"],
+    "answer_notes": "Report the year-over-year AWS sales growth for Q2 2025.",
+    "reference_answer": "AWS segment sales increased 17.5% year over year to $30.9 billion in Q2 2025."
+  },
+  {
+    "id": "q02",
+    "question": "What were Amazon's net sales and operating income in the first quarter of 2024?",
+    "expected_documents": ["AMZN-Q1-2024-Earnings-Release"],
+    "answer_notes": "Give both Q1 2024 net sales and operating income.",
+    "reference_answer": "Amazon reported Q1 2024 net sales of $143.3 billion and operating income of $15.3 billion."
+  },
+  {
+    "id": "q03",
+    "question": "How much operating cash flow did Amazon report for the trailing twelve months ended December 31, 2024?",
+    "expected_documents": ["Amazon-2024-Annual-Report"],
+    "answer_notes": "Give the trailing-twelve-month operating cash flow and its year-over-year change.",
+    "reference_answer": "Operating cash flow was $115.9 billion for the trailing twelve months ended December 31, 2024, up 36% from $84.9 billion."
+  },
+  {
+    "id": "q04",
+    "question": "How many full-time and part-time employees did Amazon have at the end of 2023?",
+    "expected_documents": ["Amazon-2023-Annual-Report"],
+    "answer_notes": "Give the employee count stated in the 2023 annual report.",
+    "reference_answer": "Amazon employed approximately 1,525,000 full-time and part-time employees as of December 31, 2023."
+  },
+  {
+    "id": "q05",
+    "question": "In the 2024 shareholder letter, what does Andy Jassy say are Amazon's two largest businesses?",
+    "expected_documents": ["2024-Shareholder-Letter-Final"],
+    "answer_notes": "Identify the two businesses named in the letter.",
+    "reference_answer": "Amazon's two largest businesses are Stores and AWS."
+  },
+  {
+    "id": "q06",
+    "question": "Compare AWS net sales in the first quarter of 2024 with the first quarter of 2025.",
+    "expected_documents": [
+      "AMZN-Q1-2024-Earnings-Release",
+      "AMZN-Q1-2025-Earnings-Release"
+    ],
+    "answer_notes": "Give AWS net sales for both periods and describe the change.",
+    "reference_answer": "AWS net sales rose from $25.0 billion in Q1 2024 to $29.3 billion in Q1 2025, an increase of about $4.3 billion or 17%."
+  },
+  {
+    "id": "q07",
+    "question": "Compare Amazon's operating income in the second quarter of 2023 and the second quarter of 2024.",
+    "expected_documents": [
+      "AMZN-Q2-2023-Amazon-Earnings-Release",
+      "AMZN-Q2-2024-Earnings-Release"
+    ],
+    "answer_notes": "Give operating income for both quarters and describe the change.",
+    "reference_answer": "Amazon's operating income increased from $7.7 billion in Q2 2023 to $14.7 billion in Q2 2024."
+  },
+  {
+    "id": "q08",
+    "question": "What net sales did Amazon report for the third quarter of 2022, and how did they change year over year?",
+    "expected_documents": ["AMZN-Q3-2022-Amazon-Earnings-Release"],
+    "answer_notes": "Give Q3 2022 net sales and the reported year-over-year growth rate.",
+    "reference_answer": "Amazon reported Q3 2022 net sales of $127.1 billion, up 15% year over year; growth was 19% excluding foreign-exchange effects."
+  },
+  {
+    "id": "q09",
+    "question": "What did Amazon report for purchases of property and equipment in 2025?",
+    "expected_documents": ["Amazon-2025-Annual-Report"],
+    "answer_notes": "Give the 2025 purchases of property and equipment figure from the cash flow statement.",
+    "reference_answer": "Amazon reported $131.819 billion of purchases of property and equipment in 2025."
+  },
+  {
+    "id": "q10",
+    "question": "What were advertising services sales in the fourth quarter of 2024?",
+    "expected_documents": ["AMZN-Q4-2024-Earnings-Release"],
+    "answer_notes": "Give Q4 2024 advertising services sales and, if present, year-over-year growth.",
+    "reference_answer": "Advertising services sales were $17.288 billion in Q4 2024, up 18% year over year."
+  },
+  {
+    "id": "q11",
+    "question": "How did Amazon's net sales change from 2023 to 2024?",
+    "expected_documents": [
+      "Amazon-2023-Annual-Report",
+      "Amazon-2024-Annual-Report"
+    ],
+    "answer_notes": "Give net sales for both full years and describe the change.",
+    "reference_answer": "Amazon's net sales increased 11%, from $574.8 billion in 2023 to $638.0 billion in 2024."
+  },
+  {
+    "id": "q12",
+    "question": "According to the 2025 shareholder letter, how is Amazon approaching generative AI and custom chips?",
+    "expected_documents": ["2025-Shareholder-Letter-Final"],
+    "answer_notes": "Summarize the letter's discussion of generative AI and Amazon's custom chips.",
+    "reference_answer": "Amazon is investing aggressively in generative AI through AWS services such as SageMaker, Bedrock, agents, and foundation models. It uses custom silicon including Trainium to lower inference costs and improve price-performance; Trainium demand is strong and Amazon expects its chips to reduce capital costs and improve AWS economics."
+  }
+]
