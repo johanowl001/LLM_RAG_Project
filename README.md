@@ -60,9 +60,6 @@ write an answer from the retrieved evidence.
 
 ## Generate a grounded answer
 
-Install dependencies and provide your API key through an environment variable. Never save
-the key in this repository:
-
 ```bash
 python3 -m pip install -r requirements.txt
 export OPENAI_API_KEY="your-key-here"
@@ -90,17 +87,12 @@ ollama pull qwen2.5:3b
 python3 src/generate_ollama.py "What was AWS sales growth in Q2 2025?" --top-k 5
 ```
 
-No API key is needed. Choose another installed model with `--model`, or set
-`OLLAMA_MODEL`. You can also use `--show-prompt` to validate retrieval and prompt
-construction without Ollama running. The local script reuses the same retriever,
-grounding prompt, source labels, and chunk metadata as `generate.py`.
 
 ## Compare with OpenAI generation
 
 The separate OpenAI comparison keeps the Ollama files and results unchanged. It uses the
 same winning `800/100` index, `top_k=8`, bounded eight-source prompt, and citation labels as
-the full local evaluation. The cost-conscious default is `gpt-5-mini`; override it only
-with a model available to your API project. The program never silently substitutes a model.
+the full local evaluation. The cost-conscious default is `gpt-5-mini'.
 
 ```bash
 export OPENAI_API_KEY="your-key-here"
