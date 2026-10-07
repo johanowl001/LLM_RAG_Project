@@ -6,6 +6,8 @@ Amazon Financial Research RAG is an evaluation-driven retrieval-augmented genera
 
 The goal is not simply to produce answers from financial documents, but to measure which retrieval and generation choices improve end-to-end RAG quality, identify failure modes, and reject components that do not add value.
 
+# Copyright: Copyright © 2026 Johan Wang. All rights reserved.
+
 ## Key results
 
 ### Retrieval experiments
